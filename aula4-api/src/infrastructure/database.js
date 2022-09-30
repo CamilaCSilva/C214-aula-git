@@ -17,9 +17,7 @@ const UserSchema = new Schema({
     },
     nome: String,
     produtora: String,
-    atores: [{
-        String
-    }],
+    atores: String,
     ano: String,
 });
 

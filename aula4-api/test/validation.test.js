@@ -3,17 +3,18 @@ const Validation = require('../src/utils/validation');
 
 it('Caso válido', () => {
     const result = Validation.create({
-        nome: "Iago",
-        email: "iago.luiz@ges.inatel.br",
-        senha: "123456789"
+        nome: "Duna",
+        produtora: "Warner Bros.",
+        atores: "Zendaya",
+        ano: '2021'
     });
     expect(result).toEqual(undefined);
 });
 
 it('Caso inválido - sem o parâmetro nome', () => {
     const result = Validation.create({
-        email: "iago.luiz@ges.inatel.br",
-        senha: "123456789"
+        produtora: "Warner Bros.",
+        atores: "Zendaya"
     });
     expect(result.name).toEqual(Constants.ErrorValidation.name);
 });

@@ -11,12 +11,12 @@ const create = {
         },
         type: 'string',
     },
-    atores: [{
+    atores: {
         presence: {
             allowEmpty: false,
         },
         type: 'string',
-    }],
+    },
     ano: {
         presence: {
             allowEmpty: false,
@@ -38,12 +38,12 @@ const update = {
         },
         type: 'string',
     },
-    atores: [{
+    atores: {
         presence: {
             allowEmpty: false,
         },
         type: 'string',
-    }],
+    },
     ano: {
         presence: {
             allowEmpty: false,
@@ -74,7 +74,7 @@ const get = {
 };
 
 const deleteBy = {
-    email: {
+    nome: {
         presence: {
             allowEmpty: false,
         },

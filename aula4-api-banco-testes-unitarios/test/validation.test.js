@@ -49,3 +49,8 @@ it('Caso válido - Lista os filmes', () => {
     const result = Validation.get({ });
     expect(result).toEqual(undefined);
 });
+
+it('Caso válido - Lista os filmes por produtora', () => {
+    const result = Validation.get({ produtora: "20th Century Studios"});
+    expect(result).toEqual(undefined);
+});

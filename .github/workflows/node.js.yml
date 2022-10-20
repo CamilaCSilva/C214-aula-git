@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-aula4:
+  test-aula4:
 
     runs-on: ubuntu-latest
 
@@ -31,8 +31,11 @@ jobs:
       working-directory: aula4-api-banco-testes-unitarios
     - run: npm run build --if-present
       working-directory: aula4-api-banco-testes-unitarios
+    - run: |
+        cd aula4-api-banco-testes-unitarios
+        npm run test
       
-  build-aula5:
+  test-aula5:
 
     runs-on: ubuntu-latest
 
@@ -53,26 +56,8 @@ jobs:
       working-directory: aula5-testes-mock
     - run: npm run build --if-present
       working-directory: aula5-testes-mock
-        
-  test:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: |
-        cd aula4-api-banco-testes-unitarios
-        npm run test
     - run: |
         cd aula5-testes-mock
         npm run test
-    
+        
+  

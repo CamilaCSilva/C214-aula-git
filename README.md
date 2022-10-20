@@ -1,4 +1,4 @@
-# C214 Laboratório
+# C214 Laboratório [![Node.js CI](https://github.com/CamilaCSilva/C214-lab/actions/workflows/node.js.yml/badge.svg)](https://github.com/CamilaCSilva/C214-lab/actions/workflows/node.js.yml)
 
 ## :memo: Informações do Projeto
  Será feito com o framework Angular (

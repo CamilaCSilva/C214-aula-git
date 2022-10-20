@@ -1,7 +1,7 @@
 const validate = require('validate.js');
 
 const Utils = require('../utils/utils');
-const Constants = require('../utils/constants');
+const Constants = require('../utils/Constants');
 const UserRepository = require('../port/user_repository');
 const Constraints = require('../utils/user_validation');
 const Validation = require('../utils/validation');

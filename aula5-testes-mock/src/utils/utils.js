@@ -1,7 +1,7 @@
 const { StatusCodes } = require('http-status-codes');
 const { v4: uuidv4 } = require('uuid');
 
-const Constants = require('./constants');
+const Constants = require('./Constants');
 
 const Utils = {
     responseStatus(data) {

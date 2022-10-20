@@ -26,10 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: 'aula4-api-banco-testes-unitarios/package-lock.json'
     - run: npm ci
-      working-directory: C214-lab/aula4-api-banco-testes-unitarios
+      working-directory: aula4-api-banco-testes-unitarios
     - run: npm run build --if-present
-      working-directory: C214-lab/aula4-api-banco-testes-unitarios
+      working-directory: aula4-api-banco-testes-unitarios
       
   build-aula5:
 
@@ -47,10 +48,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: 'aula5-testes-mock/package-lock.json'
     - run: npm ci
-      working-directory: C214-lab/aula5-testes-mock
+      working-directory: aula5-testes-mock
     - run: npm run build --if-present
-      working-directory: C214-lab/aula5-testes-mock
+      working-directory: aula5-testes-mock
         
   test:
     runs-on: ubuntu-latest
